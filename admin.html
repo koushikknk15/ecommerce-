@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <form method="post" action="admin.php" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+        <label for="description">Description:</label><br>
+        <textarea name="description" required></textarea><br>
+        <label for="price">Price:</label>
+        <input type="number" name="price" step="0.01" required><br>
+        <label for="category">Category:</label>
+        <select name="category" required>
+            <option value="1">Men</option>
+            <option value="2">Women</option>
+            <option value="3">Kids</option>
+        </select><br>
+        <label for="image">Select image to upload:</label>
+        <input type="file" name="image" id="image" required><br>
+        <input type="submit" value="Add Product">
+    </form>
+</body>
+</html>

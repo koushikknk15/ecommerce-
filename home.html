@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 0%; 
+        }
+        
+        #overlay { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            background-color: #57d9c9; /* Start with the first color */
+            z-index: -1; /* Ensure overlay is behind the content */
+            transition: background-color 0.5s ease; /* Transition */
+        }
+
+        .image-column {
+            flex: 1;
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        .image-column img {
+            width: 100%;
+            height: auto;
+            margin-top: 270px; 
+        }
+
+        .text-column {
+            flex: 2;
+            padding: 1rem;
+        }
+
+        .text1{
+            font-size: 2.5em;
+            margin-top: 270px;
+            text-align: center;
+            color:aliceblue; 
+        }
+
+        .button-container {
+            width: 100%; 
+            height: 20p;
+            display: flex;  
+            justify-content: center;
+            align-items: center; 
+            font-size: 16px;
+        }
+
+     .text-column .button-container {
+         margin-top: 10px; 
+        }
+     .button-container button {
+        width: 150px;  
+        height: 50px;   
+        font-size: 16px;
+        border-radius: 20px;
+    }
+    .mid{
+        display: flex;
+            flex-wrap: wrap;
+            width: 100%; 
+    }
+    .slide1{
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(164, 40, 40);
+        
+       }
+       .container {
+        display: flex;
+        justify-content: center; /* Distribute space around the boxes */
+        
+    
+        }
+
+        .box {
+        padding: 15px; /* Add padding for visual space */
+        border: 1px solid #ccc; /* Add a border if desired */
+        background-color: #57d9c9;
+        margin-left: 40px;
+        width: 340px;
+        height: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="overlay"></div>  
+        <div class="image-column">
+            <img src="img.webp" alt="Left Image">
+        </div>
+        <div class="text-column">
+            <p class="text1">Welcome to KNK, where fashion meets diversity.
+                 Explore our collection for both men and women, tailored to elevate your style game. 
+                 Step into sophistication and <br>shop now! 
+                <div class="button-container"> 
+                    <button type="button">Shop Now</button> 
+                </div>
+            </p>
+        </div>
+        <div class="image-column">
+            <img src="img2.webp" alt="Right Image">
+        </div>
+        
+    </div>
+    
+        <div class="slide1"> <!-- Second Slide -->
+            <div class="container">
+                <div class="box">Hello</div>
+                <div class="box">World</div>
+                <div class="box">!</div>
+              </div>
+              <h2>Choose a Category:</h2>
+    <ul>
+        <li><a href="products.php?category=1">Men</a></li>
+        <li><a href="products.php?category=2">Women</a></li>
+        <li><a href="products.php?category=3">Kids</a></li>
+    </ul>
+              
+            
+        </div>
+            
+          
+
+
+    <script>
+        window.onload = function() {
+            var colors = [ '#57d9c9', '#7ce098', '#fabf4d', '#f18d52', '#e95758', '#f583b4', '#cb88ef', '#8669d6', '#5381e8']; // Array of colors
+            var currentIndex = 1; 
+            var overlay = document.getElementById('overlay');
+
+            function changeColor() {
+                overlay.style.backgroundColor = colors[currentIndex]; 
+                currentIndex = (currentIndex + 1) % colors.length; 
+            }
+
+            setInterval(changeColor, 3000); 
+        };
+    </script>
+</body>
+</html>

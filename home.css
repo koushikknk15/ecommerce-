@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    height: 100vh;
+    background-color: #ccccff;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccccff;
+  }
+  
+  #slide1 {
+    background-color: #ffcccc;
+  }
+  
+  #slide2 {
+    background-color: #ccffcc;
+  }
+  
+  #slide3 {
+    background-color: #ccccff;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  .leftimg{
+   display: flex;
+   left: 20px;
+
+  }

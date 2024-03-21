@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\myweb\css\login.css">
+    <style>
+        body {
+    background-color: #1C1E33;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.right {
+    background-color: rgb(225, 255, 255,0);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-size: 40px;
+}
+
+.input-container {
+    display: flex; /* Display input container as flex */
+    flex-direction: column; /* Align children in a column */
+    margin-bottom: 20px;
+}
+
+.label {
+    display: inline-block; /* Change display to inline-block */
+    width: 30%; /* Set a fixed width for the labels */
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.input-container input[type="email"]::placeholder,
+.input-container input[type="password"]::placeholder {
+    color: white; /* Change placeholder color */
+}
+
+.input-container input[type="email"],
+.input-container input[type="password"] {
+    padding: 12px;
+    border: 3px solid #ED3A56;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    background-color: rgb(225, 255, 255,0);
+    color:white;
+}
+.input-container input[type="email"]:focus,
+.input-container input[type="password"]:focus {
+    border-color:#ED3A56;
+    outline: none; /* Remove default focus outline */
+}
+
+
+.input-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ED3A56;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-container input[type="submit"]:hover {
+    background-color: #ed3a56;
+}
+
+.create-account {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e12843;
+}
+
+.create-account a {
+    color: white;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+.custom-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ED3A56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    background-color: #e12843;
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    transform: translateY(1px);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="right">
+            <h1 class="heading">Login</h1>
+            <form action="login.php" method="POST" class="form">
+                <div class="input-container">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </div>
+                <button type="submit" class="custom-button">Login</button>
+                <br>
+                <span class="create-account">Create a new account <a href="signup.html">Signup</a></span>
+            </form>
+        </div>
+    </div>
+    <script>
+        // ... signupForm and loginForm event listeners ...
+
+signupForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // ... Get form data (name, gmail, etc.) ...
+
+    // Simulate signup by storing in browser's localStorage (INSECURE)
+    localStorage.setItem('user_email', gmail); 
+
+    alert('Signup Successful! (Demo only - data not saved securely)');
+});
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // ... Get gmail and password ...
+
+    const storedEmail = localStorage.getItem('user_email'); 
+
+    if (gmail === storedEmail) {
+        window.location.href = 'home.html';
+        // Optionally redirect to a "member area"
+    } else {
+        alert('Invalid Credentials (Demo)');
+    }
+});
+
+    </script>
+
+</body>
+</html>
